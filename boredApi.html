@@ -14,13 +14,13 @@
                 /*box-sizing: border-box;*/
             }
             body{
-                background:rgb(97, 12, 159);
+                background:rgb(69, 25, 82);
             }
             #container{
                 display:flex;
                 justify-content:center;
                 align-items:center;
-                background: rgb(233, 87, 147);
+                background: rgb(174, 68, 90);
                 flex-direction:column;
                 min-width:750px;
                 position:absolute;
@@ -36,14 +36,14 @@
             #container > *{
                 color:whitesmoke;
                 font-family:'Changa', sans-serif;
-                font-size:1.75 rem;
+                font-size:1.85 rem;
             }
             .changa{
                 font-family: 'Changa', sans-serif;
             }
             .montez{
                 font-family: 'Montez', cursive;
-                font-size:1.75rem;
+                font-size:1.95rem;
             }
             .bold{
                 font-weight:bold;
@@ -88,6 +88,7 @@
                 font-family:'Changa', sans-serif;
                 color:whitesmoke;
                 padding-top:65px;
+                font-size:3rem;
             }
 </style>
         </style>
@@ -110,12 +111,12 @@
                 header.classList.replace('visible', 'invisible')
                 button.style.top = '75%'
                 button.style.transform = 'translate(-50%, -50%) scale(1.4)'
-                fetch('https://www.boredapi.com/api/activity')
+                fetch('http://www.boredapi.com/api/activity')
                 .then(res => res.json())
                 .then(data => {
                     console.log(data)
                     if(data.link){
-                        activity.innerHTML = `<span class='changa'>What Activity? </span><a href=${data.link}><span class='montez bold animation'>${data.activity}</span>(Learn More)</a>`
+                        activity.innerHTML = `<span class='changa'>What Activity? </span><a href=${data.link}><span class='montez bold animation'>${data.activity}</span> (Learn More)</a>`
                     }
                     else
                     activity.innerHTML = `<span class='changa'>What Activity? </span><span class='montez'>${data.activity}</span>`
